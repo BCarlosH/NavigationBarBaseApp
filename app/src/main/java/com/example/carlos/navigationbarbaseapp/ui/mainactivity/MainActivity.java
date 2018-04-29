@@ -1,4 +1,4 @@
-package com.example.carlos.navigationbarbaseapp.activities;
+package com.example.carlos.navigationbarbaseapp.ui.mainactivity;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -8,12 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.example.carlos.navigationbarbaseapp.R;
-import com.example.carlos.navigationbarbaseapp.item1.Item1Fragment;
-import com.example.carlos.navigationbarbaseapp.item1.Item1Fragment_;
-import com.example.carlos.navigationbarbaseapp.item2.Item2Fragment;
-import com.example.carlos.navigationbarbaseapp.item2.Item2Fragment_;
-import com.example.carlos.navigationbarbaseapp.item3.Item3Fragment;
-import com.example.carlos.navigationbarbaseapp.item3.Item3Fragment_;
+import com.example.carlos.navigationbarbaseapp.ui.mainactivity.item1.Item1Fragment;
+import com.example.carlos.navigationbarbaseapp.ui.mainactivity.item1.Item1Fragment_;
+import com.example.carlos.navigationbarbaseapp.ui.mainactivity.item2.Item2Fragment;
+import com.example.carlos.navigationbarbaseapp.ui.mainactivity.item2.Item2Fragment_;
+import com.example.carlos.navigationbarbaseapp.ui.mainactivity.item3.Item3Fragment;
+import com.example.carlos.navigationbarbaseapp.ui.mainactivity.item3.Item3Fragment_;
 
 
 import org.androidannotations.annotations.AfterViews;
@@ -23,21 +23,20 @@ import org.androidannotations.annotations.ViewById;
 @EActivity(R.layout.activity_main)
 public class MainActivity extends AppCompatActivity {
 
-    @ViewById(R.id.navigation_bar)
-    protected BottomNavigationView mNavigationBar;
+    @ViewById(R.id.bottom_navigation_bar)
+    protected BottomNavigationView mBottomNavigationBar;
 
     @AfterViews
     public void initActivity() {
 
         setItemFragment(Item1Fragment_.builder().build());
-        setNavigationBarListener();
+        setBottomNavigationBarListener();
 
     }
 
-
-    private void setNavigationBarListener() {
-        if (mNavigationBar != null) {
-            mNavigationBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private void setBottomNavigationBarListener() {
+        if (mBottomNavigationBar != null) {
+            mBottomNavigationBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                     Fragment selectedFragment = null;
@@ -77,6 +76,5 @@ public class MainActivity extends AppCompatActivity {
             transaction.commit();
         }
     }
-
 
 }

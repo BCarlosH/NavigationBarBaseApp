@@ -5,4 +5,13 @@
     <string name="bottom_bar_item_2">Item 2</string>
     <string name="bottom_bar_item_3">Item 3</string>
 
+    <string name="card_tittle_1">Mocked card 1</string>
+    <string name="card_tittle_2">Mocked card 2</string>
+    <string name="card_tittle_3">Mocked card 3</string>
+    <string name="card_tittle_4">Mocked card 4</string>
+    <string name="card_tittle_5">Mocked card 5</string>
+    <string name="mocked_card_body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Etiam eget ligula eu lectus lobortis condimentum.</string>
+
+
 </resources>

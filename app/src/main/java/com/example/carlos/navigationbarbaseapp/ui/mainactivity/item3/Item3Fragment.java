@@ -1,4 +1,4 @@
-package com.example.carlos.navigationbarbaseapp.item3;
+package com.example.carlos.navigationbarbaseapp.ui.mainactivity.item3;
 
 
 import android.support.v4.app.Fragment;
