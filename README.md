@@ -1,3 +1,3 @@
 # NavigationBarBaseApp
 
-Short example from a bottom navigation bar using Java
+Short sample from a bottom navigation bar. Android Java
